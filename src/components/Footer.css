@@ -1,0 +1,6 @@
+.footer-links {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin: 1rem;
+}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TextField, Paper} from '@mui/material';
+import { TextField, Paper, Box, Typography} from '@mui/material';
 import AlertButton from './/../components/GButton';
 
 
@@ -24,8 +24,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form noValidate autoComplete="off">
-      <h1>Contact Us</h1>
+    <Box noValidate autoComplete="off" component="form">
+      <Typography variant="h3" margin={5}>Contact Us</Typography>
         <Paper sx={{ display: 'flex', flexDirection: 'column', '& .MuiTextField-root': { width: '80%', margin: 1 },}}>  
           <TextField label='Full Name' variant='outlined' type='' name='fullName' value={values.fullName} onChange={handleInputChange}></TextField>
           <TextField label='Email' variant='outlined' name='email' value={values.email} onChange={handleInputChange}></TextField>
@@ -33,7 +33,7 @@ const ContactForm = () => {
           <TextField label='Comments' variant='outlined' name='comments' value={values.comments} onChange={handleInputChange}></TextField>
           <AlertButton />
         </Paper>
-    </form>
+    </Box>
     
   )
 }
